@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './store/index.js';
+import Store from './store/index.js';
 
 import App from './app';
+const store= Store();
 
 function Main() {
   return (
     <React.StrictMode>
-      {/* <Provider store={store}> */}
+      <Provider store={store}>
         <App />
-      {/* </Provider> */}
+      </Provider>
     </React.StrictMode>
   );
 }
